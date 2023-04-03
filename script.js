@@ -10,7 +10,7 @@ let apiQuotes = [];
 function newQuote() {
     loading();
     const quote = apiQuotes[Math.floor(Math.random() * apiQuotes.length)];
-    authorText.textContent = quote.author ?? 'Unknown';
+    authorText.textContent = quote.author || 'Unknown';
     if (quote.text.length > 120) {
         quoteText.classList.add('long-quote')
     }
